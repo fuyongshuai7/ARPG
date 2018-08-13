@@ -325,7 +325,9 @@
     <Compile Include="Assets\iTweenEditor\iTweenPath.cs" />
     <Compile Include="Assets\Modle\villarger_B_Boy\scripts\characterRotate.cs" />
     <Compile Include="Assets\Scripts\Start\Button_SelectedServer.cs" />
+    <Compile Include="Assets\Scripts\Start\CharacterShowSlect_Button_Sure.cs" />
     <Compile Include="Assets\Scripts\Start\GameStart.cs" />
+    <Compile Include="Assets\Scripts\Start\Panel_CharacterShowSelect.cs" />
     <Compile Include="Assets\Scripts\Start\Panel_SelectServer.cs" />
     <Compile Include="Assets\Scripts\Start\SpinWithMouse.cs" />
   </ItemGroup>

@@ -7,7 +7,6 @@ public class GameStart : MonoBehaviour {
     public Text Start_ButtonName_Text;
     public InputField Login_InputField_Account;
     public InputField Register_InputField_Account;
-    //private GameObject button_SelectedServer;
 
     //button_SelectServer iTween Scale To
     public void iTweenScaleTo_SelectServer_Big()
@@ -80,4 +79,32 @@ public class GameStart : MonoBehaviour {
        //// sb.GetComponent<Image>().SetNativeSize();
     }
 
+
+    //CharacterSelect iTween MoveTo
+    public void iTweenMoveTo_CharacterSelect_0()
+    {
+        iTweenEvent.GetEvent(gameObject, "iTween_CharacterSelect_MoveTo0").Play();
+    }
+    public void iTweenMoveTo_CharacterSelect_Back()
+    {
+        iTweenEvent.GetEvent(gameObject, "iTween_CharacterSelect_MoveToBack").Play();
+        StartCoroutine(iTweenBackEnd());
+    }
+
+    //CharacterShowSelect iTween MoveTo
+    public void iTweenMoveTo_CharacterShowSelect()
+    {
+        iTweenEvent.GetEvent(gameObject, "iTween_CharacterShowSelect_MoveTo").Play();
+    }
+    public void iTweenMoveTo_CharacterShowSelect_Back()
+    {
+        iTweenEvent.GetEvent(gameObject, "iTween_CharacterShowSelect_MoveToBack").Play();
+        StartCoroutine(iTweenBackEnd());
+    }
+
+    IEnumerator iTweenBackEnd()
+    {
+        yield return new WaitForSeconds(0.6f);
+        gameObject.SetActive(false);
+    }
 }
